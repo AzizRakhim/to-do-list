@@ -7,9 +7,11 @@
 }
 
 body{
-  font-family: sans-serif;
-  background-color: #fff;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: $primary-color;
   min-height: 100vh;
   display: flex;
   flex-flow: wrap column;
+  align-items: center;
+  justify-content: center;
 }

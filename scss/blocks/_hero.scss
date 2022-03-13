@@ -1,0 +1,135 @@
+.main-card{
+  min-height: 50vh;
+  border-radius: 1em;
+  background-color: $white-color;
+  box-shadow: 0 0 5px #19191940;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.form-group{
+  padding: 1.5rem 1rem 0 1rem;
+}
+
+input[type="text"]{
+  font-size: 14px;
+  border-radius: 2em;
+  padding: 0.75em 1.5em;
+  margin: 0 0.5em;
+  background: transparent;
+  border: #e3e3e3 1px solid;
+  transition: border 250ms ease-out;
+
+  &:focus{
+    border: $primary-color 1px solid;
+    outline: none;
+  }
+}
+
+.submit-btn{
+  font-size: 14px;
+  margin: 0 0.5em;
+  border-radius: 2em;
+  padding: 0.75em 1.5em;
+  background-color: transparent;
+  letter-spacing: 1px;
+  color: $primary-color;
+  border: $primary-color 1px solid;
+  transition: 250ms ease-out;
+
+  &:hover{
+    color: $white-color;
+    background: $primary-color;
+  }
+}
+
+.ordered-list{
+  padding: 0 1rem !important;
+  flex: 1;
+}
+
+.filter-list{
+  list-style: none;
+  display: flex;
+  padding: 0 1rem 1.5rem 1rem !important;
+}
+
+.ordered-list-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  border-radius: 3px;
+  transition: 200ms;
+  color: $primary-color;
+  transform: translateX(100%);
+  animation: moveIt 0.5s cubic-bezier(.26,.19,.82,1.32) both;
+
+  .item-btn{
+    font-size: 16px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    letter-spacing: 1px;
+    color: $primary-color;
+    transition: border 250ms ease-out;
+    position: relative;
+
+    &::after{
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      height: 0.7px;
+      background-color: $primary-color;
+      transition: 250ms ease-out;
+      transform-origin: center;
+      transform: scaleX(0);
+    }
+
+    &:hover{
+      &::after{
+        width: 100%;
+        transform: scaleX(1.1);
+      }
+    }
+  }
+
+  .fa{
+    transition: 250ms ease-out;
+    font-size: 12px;
+  }
+}
+
+@keyframes moveIt {
+  0%{
+    transform: translateX(100%);
+  }
+
+  100%{
+    transform: translateX(0);
+  }
+}
+
+.x{
+  border: 1px solid $primary-color;
+  background-color: transparent;
+  color: $primary-color;
+  border-radius: 50%;
+  width: 26px;
+  height: 26px;
+  transition: 250ms ease-out;
+
+  &:hover{
+    background-color: $primary-color;
+
+    .fa{
+      color: $white-color;
+    }
+  }
+}
+
