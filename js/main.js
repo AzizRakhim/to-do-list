@@ -1,6 +1,6 @@
 const elSubmitBtn = document.querySelector("#submitBtn");
 const elOrderedList = document.querySelector(".ordered-list");
-const elInput = document.querySelector("input");
+const elInput = document.querySelector("#to-do-list");
 const elForm = document.querySelector("form");
 const elAllBtn = document.querySelector("#allBtn");
 const elCompleteBtn = document.querySelector("#completeBtn");
@@ -90,6 +90,23 @@ function addItem(e){
   });
 }
 
+const elFilter = document.querySelector("#filter");
 
+elFilter.addEventListener("keyup", filterItems);
+
+function filterItems(e) {
+  let text = e.target.value.toLowerCase();
+
+  let items = elOrderedList.getElementsByTagName("li");
+
+  for(let i = 0; i < Array.from(items).length; i++){
+    let itemName = items[i].firstElementChild.textContent;
+    if(itemName.toLowerCase().indexOf(text) != -1){
+      items[i].className = "ordered-list-item";
+    } else {
+      items[i].className = "ordered-list-item d-none";
+    }
+  }
+}
 
 

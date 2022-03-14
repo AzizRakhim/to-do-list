@@ -551,23 +551,15 @@ input[type="text"]:focus {
   color: #fff;
 }
 
-/*
-.none{
-  animation: noneIt 0.5s cubic-bezier(.35,-0.32,.5,.99);
+.searchBtn {
+  width: 25%;
+  background-color: #fff !important;
 }
 
-@keyframes noneIt {
-  0%{
-    transform: translateX(0);
-  }
-
-  80%{
-    transform: translateX(150%);
-  }
-
-  100%{
-    display: none !important;
-  }
+.form-control:focus {
+  border: #4fc08d 1px solid !important;
+  outline: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
-*/
 /*# sourceMappingURL=main.css.map */

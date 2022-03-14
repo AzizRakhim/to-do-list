@@ -133,3 +133,13 @@ input[type="text"]{
   }
 }
 
+.searchBtn{
+  width: 25%;
+  background-color: #fff !important;
+}
+
+.form-control:focus{
+  border: #4fc08d 1px solid !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
